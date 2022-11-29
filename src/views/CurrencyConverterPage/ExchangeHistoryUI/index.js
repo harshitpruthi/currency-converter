@@ -7,7 +7,6 @@ const ExchangeHistoryUI = (props) => {
 
     const sumValues = Object.values(statsObj).reduce((a, b) => a + b, 0);
     const avgVal = sumValues / duration;
-    console.log(view)
 
     if (view === 'chart') {
         return (

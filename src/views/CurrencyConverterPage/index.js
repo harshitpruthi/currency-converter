@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import isEmpty from 'lodash.isempty';
 
 import { getConvertedCurrencyData, getLatestCurrencyData, getTimeSeriesData } from '../../utils/api';
@@ -16,15 +16,16 @@ const currentDate = new Date().toISOString().slice(0, 10);
 
 const CurrencyConverterPage = () => {
     const location = useLocation();
+    const navigate = useNavigate();
 
     const [amount, setAmount] = useState(() => {
         if (!isEmpty(location?.state)) {
             return location?.state?.query?.amount
         } else {
-            return ''
+            return false;
         }
     });
-    
+
     const [fromCurrency, setFromCurrency] = useState(() => {
         if (!isEmpty(location?.state)) {
             return location?.state?.query?.from
@@ -71,6 +72,7 @@ const CurrencyConverterPage = () => {
     }
 
     const onCompareArrowClick = () => {
+        navigate(location.pathname, { replace: true });
         setError('')
         setFromCurrency(toCurrency);
         setToCurrency(fromCurrency)
@@ -84,7 +86,7 @@ const CurrencyConverterPage = () => {
         setLoading(true);
 
         if (isEmpty(location?.state)) {
-            if (isEmpty(amount)) {
+            if (!amount) {
                 setError('Please enter a valid number');
                 setLoading(false);
                 return false;
