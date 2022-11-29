@@ -1,0 +1,34 @@
+.tabs8Container {
+    position: relative;
+    max-height: 55px;
+    cursor: pointer;
+}
+
+.tabs8Text {
+    line-height: 15px;
+    padding-right: 45px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.tabs8TextActive {
+    color: #009688;
+}
+
+.tabs8Line {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background: #009688;
+    will-change: left, width;
+    transition: left 0.2s linear, width 0.2s linear;
+}
+
+.tabs8Shadow {
+    box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.1);
+}
+
+.valign-wrapper {
+    display: flex;
+    align-items: center;
+}

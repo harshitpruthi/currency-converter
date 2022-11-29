@@ -1,0 +1,20 @@
+.headerLogo {
+    padding: 25px 300px 0px;
+    display: flex;
+}
+
+.currencyExchangeTxt {
+    font-size: 24px;
+    margin-right: 200px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.exchangeTxt {
+    font-weight: bold;
+}
+
+.tabsText {
+    margin-right: 30px;
+    height: 36px;
+}

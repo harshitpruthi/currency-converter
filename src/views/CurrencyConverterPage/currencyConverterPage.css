@@ -1,0 +1,198 @@
+.amountInput {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.inputDivWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.inputField {
+    border: none;
+    background: none;
+    border-bottom: 1px solid grey;
+    padding: 15px 20px 15px 0;
+    font-size: 16px;
+    outline: none;
+}
+
+.amountTxt {
+    color: #7c7e8c;
+}
+
+.fromInput {
+    width: 300px;
+}
+
+.compareArrowDiv {
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    margin-right: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.compareArrow {
+    padding: 10px;
+}
+
+.convertBtn {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    margin-top: 23px;
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.convertedAmount {
+    margin-top: 100px;
+    font-size: 48px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.resultTxt {
+    color: #94C720;
+}
+
+.latestPriceDiv {
+    margin-top: 30px;
+}
+
+.priceTxt {
+    font-size: 18px;
+    color: #7c7e8c;
+    width: 250px
+}
+
+.loadingData {
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.errorDiv {
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.convertMainDiv {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.excHistoryTxt {
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.conversionHistoryTable {
+    background: #fff;
+    width: 40%;
+    border-collapse: collapse;
+    margin-right: 100px;
+}
+
+.tableHistoryHeadRow {
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.tableHistoryHeader {
+    width: 20%;
+    padding: 20px;
+    text-align: left;
+    color: #8d8d8d;
+}
+
+.tableHistoryRow {
+    padding: 20px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.durationSelect {
+    width: 130px;
+    height: 30px;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #e4e4e4;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.durationLabel {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.selectDiv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.tableContainer {
+    display: flex;
+}
+
+.statData {
+    padding: 20px;
+}
+
+.statRow {
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.statTable {
+    height: 200px;
+}
+
+.statDataVal {
+    padding: 20px 20px 20px 100px;
+}
+
+.selectRadioContainer {
+    display: flex;
+    align-items: center;
+}
+
+.radioCls {
+    margin-left: 200px;
+}
+
+.viewType {
+    font-size: 18px;
+}
+
+.chartRadio {
+    margin-left: 20px;
+}
+
+input[name="type"] {
+	accent-color: #009688;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+
+import React, {
+  lazy,
+  Suspense,
+} from 'react';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from 'react-router-dom';
+
+const CurrencyConverterPage = lazy(() => import('./views/CurrencyConverterPage'));
+const ConversionHistoryPage = lazy(() => import('./views/ConversionHistoryPage'));
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Router>
+        <Suspense fallback={<div></div>}>
+          <Routes>
+            <Route path="/" exact element={<CurrencyConverterPage />} />
+            <Route path="/currency-converter" exact element={<CurrencyConverterPage />} />
+            <Route path="/conversion-history" exact element={<ConversionHistoryPage />} />
+          </Routes>
+        </Suspense>
+      </Router>
     </div>
   );
 }
