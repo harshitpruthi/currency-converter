@@ -15,7 +15,6 @@ const thirtyDaysAgo = new Date(Date.now() - 29 * 24 * 60 * 60 * 1000).toISOStrin
 const currentDate = new Date().toISOString().slice(0, 10);
 
 const CurrencyConverterPage = () => {
-    console.log('hi')
     const location = useLocation();
     const navigate = useNavigate();
 
